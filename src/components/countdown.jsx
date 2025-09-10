@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import { motion } from "framer-motion"
 import { Heart, Gift, Cake, Star } from "lucide-react"
 
@@ -21,20 +21,19 @@ function calculateTimeLeft(targetDate) {
 }
 
 export default function Countdown({ targetDate, onCountdownEnd }) {
-  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft(targetDate))
+  const targetRef = useRef(targetDate || new Date(Date.now() + 10000))
+  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft(targetRef.current))
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      const updated = calculateTimeLeft(targetDate)
-
+      const updated = calculateTimeLeft(targetRef.current)
       setTimeLeft(updated)
       if (!updated || Object.keys(updated).length <= 0) {
-        onCountdownEnd()
+        onCountdownEnd && onCountdownEnd()
       }
     }, 1000)
-
     return () => clearTimeout(timer)
-  }, [timeLeft, targetDate])
+  }, [timeLeft, onCountdownEnd])
 
   const icons = [
     <Heart key="heart" className="text-pink-500 fill-pink-200" />,

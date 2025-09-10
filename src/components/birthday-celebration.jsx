@@ -88,9 +88,9 @@ export default function BirthdayCelebration() {
             >
               <div className="text-center">
                 <p className="text-purple-700 mb-2">
-                Just wanted to remind you—you're my favorite person. My days are better, smiles are wider, and life is sweeter because of you.
+                Just wanted to remind you—you're such a wonderful person. The world feels brighter, smiles feel warmer, and days are better with you around.
                 </p>
-                <p className="text-pink-600 font-medium">I hope your birthday is full of love, magic, and everything that makes you smile 💖</p>
+                <p className="text-pink-600 font-medium">I hope your birthday is filled with joy, laughter, and everything that makes you happy 💖</p>
                 <div className="flex justify-center">
                   <motion.div
                     animate={{
@@ -121,7 +121,7 @@ export default function BirthdayCelebration() {
           May every wish you make today come true. You truly deserve all the happiness in the world, and I'll always be here to cheer you on.
           </p>
           <div className="flex justify-center items-center gap-2">
-            <p className="text-pink-600 font-medium">Let’s always keep these wonderful moments and memories alive 🫶</p>
+            <p className="text-pink-600 font-medium">Let’s always keep these meaningful moments and memories alive 🫶</p>
           </div>
         </div>
       </motion.div>
