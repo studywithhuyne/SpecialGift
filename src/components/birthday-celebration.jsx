@@ -117,9 +117,22 @@ export default function BirthdayCelebration() {
         transition={{ delay: 1 }}
       >
         <div className="text-center">
+          {/* Ảnh trước lời chúc */}
+          <img
+            src="/catflower.jpg"
+            alt="Birthday memory 1"
+            className="mx-auto rounded-xl shadow-lg mb-4 max-h-60"
+          />
           <p className="text-lg text-purple-700 mb-4">
-          May every wish you make today come true. You truly deserve all the happiness in the world, and I'll always be here to cheer you on.
+            May every wish you make today come true. You truly deserve all the happiness in the world, and I'll always be here to cheer you on.
           </p>
+          {/* Ảnh trước emoji */}
+          <img
+            src="/tvy.jpg"
+            alt="Birthday memory 2"
+            className="mx-auto rounded-xl shadow-lg mb-2 max-h-60"
+          />
+          <div className="mb-2 text-2xl">🎉🥳🎂🥳🎉</div>
           <div className="flex justify-center items-center gap-2">
             <p className="text-pink-600 font-medium">Let’s always keep these meaningful moments and memories alive 🫶</p>
           </div>
